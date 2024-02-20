@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 const Menu = ({ title, menuObject }) => {
 
     useEffect(() => {
-        function changeMenuActive (){
+        function changeMenuActive() {
             allLi.forEach(li => li.classList.remove('active'));
             this.classList.add('active');
         }
@@ -16,7 +16,7 @@ const Menu = ({ title, menuObject }) => {
             <ul>
                 {
                     menuObject && menuObject.map((menu) => (
-                        <li>{""}<a href="#"> <i>{menu.icon}</i>
+                        <li key={menu.id}><a href="/"> <i>{menu.icon}</i>
                             <span>{menu.name}</span>
                         </a></li>
 
